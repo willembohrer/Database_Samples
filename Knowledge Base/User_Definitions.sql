@@ -1,0 +1,39 @@
+CREATE USER
+  ApplicationUser
+WITH
+  PASSWORD 'AppUser2020!';
+
+GRANT
+  SELECT,
+  INSERT,
+  UPDATE,
+  DELETE
+ON
+  ALL TABLES
+IN
+  SCHEMA public
+TO
+  ApplicationUser;
+
+GRANT
+  ALL PRIVILEGES
+ON
+  ALL SEQUENCES
+IN
+  SCHEMA public
+TO
+  ApplicationUser;
+
+ALTER
+  DEFAULT PRIVILEGES
+IN
+  SCHEMA public
+GRANT
+  SELECT,
+  INSERT,
+  UPDATE,
+  DELETE
+ON
+  TABLES
+TO
+  ApplicationUser;
